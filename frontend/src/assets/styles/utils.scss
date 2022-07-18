@@ -1,0 +1,15 @@
+@function toRem($size) {
+    @return $size / 16px * 1rem;
+}
+
+@mixin transition(
+    $properties,
+    $duration: 105ms,
+    $timingFunction: cubic-bezier(0.4, 0, 0.2, 1),
+    $delay: 0ms
+) {
+    -webkit-transition: $duration $timingFunction $delay;
+    transition: $duration $timingFunction $delay;
+    -webkit-transition-property: $properties;
+    transition-property: $properties;
+}
